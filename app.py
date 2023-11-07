@@ -24,7 +24,7 @@ rad = st.sidebar.radio("Navigation", ["Home", "Spam or Ham Detection", "Sentimen
 
 # Add a title and description to the Home Page
 if rad == "Home":
-    st.title(":rocket: Complete Text Analysis App")
+    st.title("Complete Text Analysis App")
     st.markdown("### Analyze different aspects of text including Spam Detection, Sentiment Analysis, Stress Detection,"
                 " Hate and Offensive Content Detection, and Sarcasm Detection.")
     st.text(" ")

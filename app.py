@@ -14,23 +14,28 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestClassifier
 
+# Download necessary NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
-sw=nltk.corpus.stopwords.words("english")
+sw = nltk.corpus.stopwords.words("english")
 
-rad=st.sidebar.radio("Navigation",["Home","Spam or Ham Detection","Sentiment Analysis","Stress Detection","Hate and Offensive Content Detection","Sarcasm Detection"])
+rad = st.sidebar.radio("Navigation", ["Home", "Spam or Ham Detection", "Sentiment Analysis", "Stress Detection",
+                                     "Hate and Offensive Content Detection", "Sarcasm Detection"])
 
-#Home Page
-if rad=="Home":
-    st.title("Complete Text Analysis App")
+# Add a title and description to the Home Page
+if rad == "Home":
+    st.title(":rocket: Complete Text Analysis App")
+    st.markdown("### Analyze different aspects of text including Spam Detection, Sentiment Analysis, Stress Detection,"
+                " Hate and Offensive Content Detection, and Sarcasm Detection.")
     st.text(" ")
-    st.text("The Following Text Analysis Options Are Available->")
-    st.text(" ")
-    st.text("1. Spam or Ham Detection")
-    st.text("2. Sentiment Analysis")
-    st.text("3. Stress Detection")
-    st.text("4. Hate and Offensive Content Detection")
-    st.text("5. Sarcasm Detection")
+
+    st.subheader("Available Analysis Options:")
+    st.markdown("- **Spam or Ham Detection**\n"
+                "- **Sentiment Analysis**\n"
+                "- **Stress Detection**\n"
+                "- **Hate and Offensive Content Detection**\n"
+                "- **Sarcasm Detection**")
+    
 
 #function to clean and transform the user input which is in raw format
 def transform_text(text):
